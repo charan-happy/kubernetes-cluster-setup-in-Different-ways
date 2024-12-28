@@ -1,7 +1,6 @@
 resource "aws_instance" "k8s_master" {
   ami = var.ami.master
   instance_type = var.instance_type.master
-  key_name = aws_key_pair.k8s.key_name
   security_groups = ["k8s_master_sg"]
  connection {
     type     = "ssh"
